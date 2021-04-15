@@ -1,7 +1,13 @@
-# conflux-docker-armv8
+# conflux-docker-arm64
 
 
-1. ubuntu docker 配置代理: 
-    https://lw900925.github.io/docker/docker-http-or-https-proxy.html
-    https://docs.docker.com/config/daemon/systemd/
-2. cargo registry update
+### How to build image
+
+1. 自行构建节点程序 conflux, 放入 run 目录
+2. 运行构建命令
+
+```sh
+$ make build TAG=1.1.3
+```
+
+Note：make build 使用 Dockerfile.slim 文件来构建镜像

@@ -1,0 +1,6 @@
+FROM arm64v8/rust:1.51-buster
+WORKDIR /root
+COPY run run
+
+EXPOSE 12535 12536 12537 12538 12539 32323 32525
+ENTRYPOINT [ "/root/run/start.sh" ]

@@ -1,6 +1,14 @@
-FROM arm64v8/rust:1.51-buster
+#FROM arm64v8/rust:1.51-buster
+#FROM arm64v8/debian:buster
+#FROM arm64v8/ubuntu
+FROM rust:1.51-buster
 WORKDIR /root
 COPY run run
+RUN chmod +x /root/run/start.sh
+RUN chmod +x /root/run/conflux
+#RUN apt-get install build-essential libapr1-dev libssl-dev
+#RUN apt-get install libssl-dev
+RUN openssl version
 
 EXPOSE 12535 12536 12537 12538 12539 32323 32525
-ENTRYPOINT [ "/root/run/start.sh" ]
+ENTRYPOINT [ "/root/run/conflux", "--config", "testnet.toml"]

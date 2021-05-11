@@ -39,4 +39,4 @@ ldd - print shared object dependencies
 
 
 ## 资料
-1. [cmake]()
+1. [cmake](https://cmake.org/)

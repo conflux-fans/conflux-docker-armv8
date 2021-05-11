@@ -1,7 +1,6 @@
 #FROM arm64v8/rust:1.51-buster
 #FROM arm64v8/debian:buster
-#FROM arm64v8/ubuntu
-FROM rust:1.51-buster
+FROM arm64v8/ubuntu
 WORKDIR /root
 COPY run run
 RUN chmod +x /root/run/start.sh

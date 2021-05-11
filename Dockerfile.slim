@@ -7,8 +7,6 @@ RUN apt-get update && apt-get install -y openssl libssl-dev
 COPY run run
 RUN chmod +x /root/run/start.sh
 RUN chmod +x /root/run/conflux
-#RUN apt-get install build-essential libapr1-dev libssl-dev
-#RUN apt-get install libssl-dev
 WORKDIR /root/run
 
 EXPOSE 12535 12536 12537 12538 12539 32323 32525
